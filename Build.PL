@@ -6,7 +6,7 @@ my $CONFIG = "imlib2-config";
 
 my $version = `$CONFIG --version`;
 
-# imlib2-config not fount, try pkg-config
+# imlib2-config not found, try pkg-config
 if (!$version) {
   $CONFIG = "pkg-config imlib2";
   $version = `$CONFIG --modversion`;
