@@ -5,6 +5,13 @@ use strict;
 my $CONFIG = "imlib2-config";
 
 my $version = `$CONFIG --version`;
+
+# imlib2-config not fount, try pkg-config
+if (!$version) {
+  $CONFIG = "pkg-config imlib2";
+  $version = `$CONFIG --modversion`;
+}
+
 if (!$version) {
   warn 'You must install the imlib2 library before you can install
 Image::Imlib2. You can obtain imlib2 from
