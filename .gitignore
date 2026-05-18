@@ -1,0 +1,17 @@
+# Build and installation artifacts
+!Build/
+.last_rewrite
+blib/
+pm_to_blib
+*~
+MYMETA.*
+Makefile
+pm_to_blib
+blibdirs
+
+# Test and coverage results
+_build/
+
+# Temporary files
+*.swp
+*.bak
